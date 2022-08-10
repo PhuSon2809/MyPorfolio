@@ -1,0 +1,42 @@
+@import "../../../App.scss";
+
+.activities {
+  height: fit-content;
+  .fanpage{
+    color: $white;
+    text-decoration: underline;
+  }
+  .head {
+    color: $navi;
+    display: flex;
+    align-items: center;
+    i {
+      color: white;
+      font-size: 2.1rem;
+      padding-top: 0.2rem;
+    }
+  }
+
+  .content {
+    padding: 1rem;
+    background: linear-gradient(145deg, #e2e8ec4b, rgba(128, 128, 128, 0.223));
+    // background: linear-gradient(145deg, #e2e8ec, $white);
+    box-shadow: 1px 3px 5px $navi;
+    border-radius: 0.5rem;
+
+    h6{
+      color: $navi;
+    }
+
+    ul{
+      color: $white;
+      margin-left: 1.5rem;
+    }
+    p{
+      color: $white;
+    }
+    i{
+      color: $white;
+    }
+  }
+}

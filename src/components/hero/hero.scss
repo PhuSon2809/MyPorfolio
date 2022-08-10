@@ -1,0 +1,96 @@
+@import "../../App.scss";
+
+.hero {
+  padding-top: 8rem;
+  color: #fff;
+
+  .left {
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    letter-spacing: 1px;
+    .uppercase {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    .content {
+      h1 {
+        span {
+          color: $navi;
+        }
+      }
+
+      .callback {
+        color: $navi;
+        span {
+          color: $white;
+        }
+      }
+    }
+
+    .group-btn {
+      margin-top: auto;
+      .i-btn {
+        @include btn;
+        font-size: 1.5rem;
+        text-decoration: none;
+        border-radius: 6px;
+        margin-right: 1.5rem;
+
+        &:hover {
+          transform: scale(1.05) !important;
+        }
+      }
+    }
+  }
+
+  .right-img {
+    img {
+      z-index: 100;
+      position: relative;
+    }
+
+    .navi {
+      background-color: $navi;
+      border-radius: 0.8rem;
+      width: 80%;
+      height: 95%;
+      opacity: 0.8;
+      z-index: 10;
+      position: absolute;
+      bottom: 2.5rem;
+      left: 4.5rem;
+    }
+
+    .gray {
+      background: linear-gradient(145deg, #e2e8ec, $white);
+      box-shadow: 3px 3px 8px $navi, -3px -3px 8px #cbcbcb;
+      border-radius: 0.8rem;
+      width: 80%;
+      height: 95%;
+      opacity: 0.7;
+      z-index: 12;
+      position: absolute;
+      bottom: 1rem;
+      left: 3rem;
+    }
+  }
+}
+
+/*===== responsive ======*/
+@media only screen and (max-width: 992px) {
+  .hero {
+    .left {
+      .group-btn{
+        text-align: center;
+      }
+    }
+    .right-img {
+      margin: 4.5rem 2rem 1rem 0;
+      img {
+        margin-left: 1.3rem;
+      }
+    }
+  }
+}

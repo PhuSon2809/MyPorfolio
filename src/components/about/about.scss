@@ -1,0 +1,15 @@
+@import "../../App.scss";
+
+.about {
+  padding-top: 3%;
+  padding-bottom: 3%;
+
+  .heading {
+    h1 {
+      @include title(3rem);
+      display: inline-block;
+      padding: 0 2rem;
+      color: $white;
+    }
+  }
+}

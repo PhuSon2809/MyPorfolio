@@ -1,0 +1,39 @@
+@import "../../App.scss";
+
+.contact {
+  padding-bottom: 3%;
+  
+  .containers {
+    .heading {
+      h1 {
+        color: $white;
+        @include title(3rem);
+        display: inline-block;
+        padding: 0 2rem;
+      }
+    }
+
+    .content {
+      padding: 1rem;
+      background: linear-gradient(145deg, #e2e8ec4b, rgba(128, 128, 128, 0.223));
+      box-shadow: 1px 3px 5px $navi;
+      border-radius: 0.5rem;
+
+      .infor{
+        background-color: $navi;
+        padding: 1rem 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid white;
+
+        span{
+          display: flex;
+          align-items: center;
+          i{
+            font-size: 1.2rem;
+            margin-right: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+}

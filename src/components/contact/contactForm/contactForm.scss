@@ -1,0 +1,13 @@
+@import "../../../App.scss";
+
+.contactForm {
+  label{
+    color: white;
+  }
+
+ 
+}
+
+.btn{
+    @include btn;
+  }

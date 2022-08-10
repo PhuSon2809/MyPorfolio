@@ -1,0 +1,25 @@
+@import "../../App.scss";
+
+.footer {
+  width: 100%;
+  padding: 1.5rem 0;
+  text-align: center;
+  background: $blue;
+  color: white;
+  box-shadow: 8px 2px 4px 2px $navi;
+
+  img {
+    width: 3.5rem;
+    border-radius: 50%;
+    border: solid 2px $navi;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    width: 50%;
+    margin: auto;
+    padding-top: 1.15rem;
+    border-top: 1px solid white;
+    color: $navi;
+  }
+}

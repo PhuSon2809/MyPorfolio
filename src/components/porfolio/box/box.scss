@@ -1,0 +1,59 @@
+@import "../../../App.scss";
+
+.box {
+  width: 100%;
+  margin: auto;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 1px 3px 5px $white;
+
+  &:hover {
+    transform: scale(1.05);
+    z-index: 800;
+  }
+
+  &:hover .navy {
+    opacity: 0.6;
+    transition: 0.3s all ease-in-out;
+  }
+
+  &:hover .content {
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .navy {
+    // background: linear-gradient(145deg, #e2e8ec, rgb(128, 128, 128));
+    // background-color: $navi;
+    background-color: $black;
+    width: 90%;
+    height: 92%;
+    position: absolute;
+    top: 4%;
+    left: 6%;
+    transition: all 0.4s;
+    opacity: 0;
+  }
+
+  .content {
+    padding: 1rem;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    opacity: 0;
+    color: $navi;
+
+    h5 {
+      padding-bottom: 0.7rem;
+    }
+
+    p {
+      padding-top: 0.7rem;
+      border-top: 1px solid $white;
+    }
+  }
+}

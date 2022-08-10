@@ -1,0 +1,52 @@
+@import "../../../App.scss";
+
+.certificates {
+  height: fit-content;
+  .head {
+    color: $navi;
+    display: flex;
+    align-items: center;
+    i {
+      color: white;
+      font-size: 2.1rem;
+      padding-top: 0.2rem;
+    }
+  }
+
+  .content {
+    padding: 1rem;
+    background: linear-gradient(145deg, #e2e8ec4b, rgba(128, 128, 128, 0.223));
+    // background: linear-gradient(145deg, #e2e8ec, $white);
+    box-shadow: 1px 3px 5px $navi;
+    border-radius: 0.5rem;
+
+    .item {
+      color: $navi;
+      h6 {
+        color: $white;
+        margin-left: 0.3rem;
+      }
+      ul {
+        margin-left: 2.5rem;
+        span {
+          font-weight: 500;
+        }
+        .view {
+          display: flex;
+          align-items: center;
+          margin-top: 0.5rem;
+
+          .btn {
+            margin-left: 1rem;
+            @include btn;
+            padding: 0 0.5rem !important;
+
+            &:hover {
+              transform: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
