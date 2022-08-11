@@ -1,0 +1,149 @@
+@import "../../../App.scss";
+
+.modal {
+  .modal-dialog {
+    max-width: 55%;
+    margin: auto;
+
+    .modal-body {
+      height: fit-content;
+
+      .btn {
+        @include btn;
+        font-size: 1.1rem !important;
+        padding: 0.5rem 1rem !important;
+        span {
+          display: flex;
+          align-items: center;
+          i {
+            margin-right: 0.3rem;
+          }
+        }
+      }
+
+      .close {
+        @include btn;
+        opacity: 1;
+        border-radius: 50%;
+        padding: 0.5rem 0.5rem !important;
+      }
+
+      .dialog-left {
+        img {
+          width: 100%;
+          margin: auto;
+        }
+      }
+
+      .dialog-right {
+        letter-spacing: 0.5px;
+        padding-top: 2.5rem;
+        h2 {
+          margin-bottom: 2.5rem;
+        }
+
+        ul {
+          margin-left: 1.5rem;
+
+          .time {
+            display: flex;
+            justify-content: space-between;
+
+            .marg {
+              color: $navi;
+              font-size: 1.1rem;
+            }
+          }
+
+          li {
+            margin-bottom: 0.7rem;
+
+            span {
+              font-weight: 500;
+            }
+          }
+        }
+
+        .button {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .modal {
+    .modal-dialog {
+      max-width: 90%;
+      margin: auto;
+
+      .modal-body {
+        height: fit-content;
+
+        .btn {
+          @include btn;
+          font-size: 1.1rem !important;
+          padding: 0.5rem 1rem !important;
+          span {
+            display: flex;
+            align-items: center;
+            i {
+              margin-right: 0.3rem;
+            }
+          }
+        }
+
+        .close {
+          @include btn;
+          opacity: 1;
+          border-radius: 50%;
+          padding: 0.5rem 0.5rem !important;
+        }
+
+        .dialog-left {
+          img {
+            width: 100%;
+            margin: auto;
+          }
+        }
+
+        .dialog-right {
+          letter-spacing: 0.5px;
+          padding-top: 2.5rem;
+          h2 {
+            font-size: 1.6rem;
+          }
+
+          ul {
+            margin-left: 1rem;
+
+            .time {
+              display: flex;
+              justify-content: space-between;
+
+              .marg {
+                color: $navi;
+                font-size: 1.1rem;
+              }
+            }
+
+            li {
+              margin-bottom: 0.7rem;
+
+              span {
+                font-weight: 500;
+              }
+            }
+          }
+
+          .button {
+            margin-top: 2.5rem;
+            text-align: center;
+          }
+        }
+
+      }
+    }
+  }
+}

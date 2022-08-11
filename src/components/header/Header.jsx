@@ -55,7 +55,7 @@ function Header(props) {
             </li> */}
           </ul>
         </div>
-        <a className="cv-btn ml-auto">
+        <a href="Frontend Developer -Tran Phu Son.pdf" download="Frontend Developer -Tran Phu Son.pdf" className="cv-btn ml-auto">
           <Button>Download CV</Button>
         </a>
         <div className="right">

@@ -1,7 +1,7 @@
 @import "../../../App.scss";
 
 .box {
-  width: 100%;
+  width: 24.5rem;
   margin: auto;
   cursor: pointer;
   position: relative;
@@ -41,18 +41,21 @@
 
   .content {
     padding: 1rem;
+    margin-right: 2rem;
     position: absolute;
     top: 40px;
     left: 40px;
     opacity: 0;
     color: $navi;
 
-    h5 {
+    h2 {
       padding-bottom: 0.7rem;
+      font-size: 1.65rem;
     }
 
     p {
       padding-top: 0.7rem;
+      font-size: 0.9rem;
       border-top: 1px solid $white;
     }
   }

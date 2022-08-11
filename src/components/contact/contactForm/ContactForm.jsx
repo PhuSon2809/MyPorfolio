@@ -1,30 +1,68 @@
-import React from "react";
+import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import { Form, FormFeedback, FormGroup, Input, Label } from "reactstrap";
 import "./contactForm.scss";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 ContactForm.propTypes = {
-    fullNameError: PropTypes.string,
-    phoneError: PropTypes.string,
-    subjectError: PropTypes.string,
-    messageError: PropTypes.string,
-    inputValue: PropTypes.object,
-    handleOnChange: PropTypes.func,
-    handleValidate: PropTypes.func,
+  fullNameError: PropTypes.string,
+  phoneError: PropTypes.string,
+  subjectError: PropTypes.string,
+  messageError: PropTypes.string,
+  inputValue: PropTypes.object,
+  handleOnChange: PropTypes.func,
+  handleValidate: PropTypes.func,
 };
 
 function ContactForm({
   fullNameError,
-  phoneError,
+  emailError,
   subjectError,
   messageError,
   inputValue,
   handleOnChange,
   handleValidate,
 }) {
+  const form = useRef();
+
+
+  const sendEmail = (e) => {
+    const value = e.target.value;
+    e.preventDefault();
+    if (inputValue.fullName === "" || inputValue.email === "" || inputValue.subject === "" || inputValue.message === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    } else {
+      emailjs
+        .sendForm(
+          "service_xgxvdbv",
+          "template_88ftwdo",
+          form.current,
+          "aioupPQHZhEE0Dyt7"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            Swal.fire(
+              "Send email successfully",
+              "Click button to continute!",
+              "success"
+            );
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
+  };
+
   return (
-    // <Form onSubmit={handleOnSubmit}>
-    <Form>
+    <form ref={form} onSubmit={sendEmail}>
+      <h2 className="text-white">Contact for cooperation</h2>
       <div className="row contactForm">
         <FormGroup className="col-md-6">
           <Label for="fullName">Full Name:</Label>
@@ -32,7 +70,7 @@ function ContactForm({
             type="text"
             id="fullName"
             name="fullName"
-            placeholder="fullName"
+            placeholder="full name"
             value={inputValue.fullName}
             onChange={handleOnChange}
             valid={fullNameError === ""}
@@ -42,19 +80,19 @@ function ContactForm({
           <FormFeedback>{fullNameError}</FormFeedback>
         </FormGroup>
         <FormGroup className="col-md-6">
-          <Label for="phone">Phone:</Label>
+          <Label for="email">Email:</Label>
           <Input
-            type="number"
-            id="phone"
-            name="phone"
-            placeholder="phone"
-            value={inputValue.phone}
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email"
+            value={inputValue.email}
             onChange={handleOnChange}
-            valid={phoneError === ""}
-            invalid={phoneError !== ""}
+            valid={emailError === ""}
+            invalid={emailError !== ""}
             onBlur={handleValidate}
           />
-          <FormFeedback>{phoneError}</FormFeedback>
+          <FormFeedback>{emailError}</FormFeedback>
         </FormGroup>
         <FormGroup className="col-12">
           <Label for="subject">Subject:</Label>
@@ -87,8 +125,8 @@ function ContactForm({
           <FormFeedback>{messageError}</FormFeedback>
         </FormGroup>
       </div>
-      <input type="submit" value="Update" className="btn" />
-    </Form>
+      <input type="submit" value="Sent mail" className="btn" />
+    </form>
   );
 }
 

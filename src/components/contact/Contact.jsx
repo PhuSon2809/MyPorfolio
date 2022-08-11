@@ -5,13 +5,13 @@ import ContactForm from "./contactForm/ContactForm";
 
 function Contact(props) {
   const [fullNameError, setFullNameError] = useState("");
-  const [phoneError, setPhoneError] = useState("");
+  const [emailError, setEmailError] = useState("");
   const [subjectError, setSubjectError] = useState("");
   const [messageError, setMessageError] = useState("");
 
   const [inputValue, setInputValue] = useState({
     fullName: "",
-    phone: "",
+    email: "",
     subject: "",
     message: "",
   });
@@ -29,9 +29,9 @@ function Contact(props) {
   const handleValidate = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    const phonePattern = /^(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/;
+    const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    const phoneTest = phonePattern.test(value);
+    const phoneTest = emailPattern.test(value);
 
     if (name === "fullName" && value.length === 0) {
       setFullNameError("Please field your name.");
@@ -49,15 +49,15 @@ function Contact(props) {
       setMessageError("");
     }
 
-    if (name === "phone") {
+    if (name === "email") {
       if (value.length === 0) {
-        setPhoneError("Please field your phone.");
+        setEmailError("Please field your phone.");
       } else if (!phoneTest) {
-        setPhoneError(
-          "Phone must start with 03, 05, 07, 08, 09 and have 10 number"
+        setEmailError(
+          "Enter a valid email address"
         );
       } else {
-        setPhoneError("");
+        setEmailError("");
       }
     }
   };
@@ -73,7 +73,7 @@ function Contact(props) {
           <Col md="3" className="m-auto">
             <div className="infor">
               <span>
-                <i class="ri-phone-line"></i>
+                <i className="ri-phone-line"></i>
                 <h5 className="mb-0">Phone</h5>
               </span>
 
@@ -81,7 +81,7 @@ function Contact(props) {
             </div>
             <div className="infor">
               <span>
-                <i class="ri-mail-line"></i>
+                <i className="ri-mail-line"></i>
                 <h5 className="mb-0">Email</h5>
               </span>
 
@@ -89,7 +89,7 @@ function Contact(props) {
             </div>
             <div className="infor mb-0">
               <span>
-                <i class="ri-map-pin-line"></i>
+                <i className="ri-map-pin-line"></i>
                 <h5 className="mb-0">Location</h5>
               </span>
 
@@ -99,7 +99,7 @@ function Contact(props) {
           <Col className="form" md="9">
             <ContactForm
               fullNameError={fullNameError}
-              phoneError={phoneError}
+              emailError={emailError}
               subjectError={subjectError}
               messageError={messageError}
               inputValue={inputValue}
