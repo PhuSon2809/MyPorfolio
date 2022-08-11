@@ -2,14 +2,14 @@ const porfolioApi = [
   {
     id: 1,
     title: "My Portfolio",
-    description: "A UX/UI showcase my personal information, skills, CV, and projects.",
+    description: "Web interface and functions such as downloading CV, sending mail, displaying project and personal information.",
     teamSize: "Individual",
     tech: "HTML, SCSS, React JS, Bootstrap 4, React-strap, redux, react-simple-typewriter, sweetalert2.",
     position: "",
     time: "August 2022",
     semester: "5/9",
     git: "https://github.com/PhuSon2809/MyPorfolio",
-    web: "https://homvn.netlify.app/",
+    web: "https://phuson-portfolio.netlify.app/",
     image: "https://firebasestorage.googleapis.com/v0/b/porfolio-d552f.appspot.com/o/porfolio%2Fporfolio.png?alt=media&token=c0139f68-4e9c-40df-9e3b-16a7b3525ad9",
   },
   {
@@ -28,7 +28,7 @@ const porfolioApi = [
   {
     id: 3,
     title: "ConFusion - Version 1",
-    description: "A UX/UI to preview pizza, view information, and contact with store.",
+    description: "A web interface to preview pizza, view information, and contact the store.",
     teamSize: "Individual",
     tech: "HTML, CSS, SCSS, Bootstrap 4, jQuery.",
     position: "",
@@ -41,7 +41,7 @@ const porfolioApi = [
   {
     id: 4,
     title: "ConFusion - Version 2",
-    description: "A UX/UI to preview pizza, view information and contact with store.",
+    description: "A web interface to preview pizza, view information, and contact the store by other functions.",
     teamSize: "Individual",
     tech: "HTML, SCSS, Bootstrap 4, React JS, React-strap, Redux, React-redux-form.",
     position: "",
@@ -54,7 +54,7 @@ const porfolioApi = [
   {
     id: 5,
     title: "Online Food Store",
-    description: "A web application to sell food and manage users.",
+    description: "A web interface to sell food and manage users.",
     teamSize: "Individual",
     tech: "HTML, CSS, Bootstrap 4, JavaScript.",
     position: "",
@@ -67,7 +67,7 @@ const porfolioApi = [
   {
     id: 6,
     title: "Online Burger Store",
-    description: "A UI to sell burgers store.",
+    description: "A web interface to sell burgers store.",
     teamSize: "Individual",
     tech: "HTML, CSS, JavaScript.",
     position: "",

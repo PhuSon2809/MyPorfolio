@@ -27,8 +27,8 @@ function Hero(props) {
                 <span>{text}</span>
               </h1>
               <p className="mt-3">
-                I love programming and user interface design. Dark is an
-                inquisitive person, seeking to develop his own programming
+                I love programming and user interface design. I am an
+                inquisitive person, seeking to develop my own programming
                 skills. My goal is to become a Front-end Developer. And become a
                 future user interface expert.
               </p>
