@@ -35,7 +35,7 @@ const porfolioApi = [
     time: "May 2022",
     semester: "5/9",
     git: "https://github.com/PhuSon2809/conFusion_Bootstrap4",
-    web: "https://homvn.netlify.app/",
+    web: "https://confusion-version1.netlify.app",
     image: "https://firebasestorage.googleapis.com/v0/b/porfolio-d552f.appspot.com/o/porfolio%2Fpizza.png?alt=media&token=1593d6b6-0737-4b4a-876c-3b805a80a88b",
   },
   {
@@ -48,7 +48,7 @@ const porfolioApi = [
     time: "June 2022",
     semester: "5/9",
     git: "https://github.com/PhuSon2809/conFusion-ReactJS",
-    web: "https://homvn.netlify.app/",
+    web: "https://confusion-version2.netlify.app",
     image: "https://firebasestorage.googleapis.com/v0/b/porfolio-d552f.appspot.com/o/porfolio%2FpizzaReact.png?alt=media&token=c8b56710-78a7-4475-a5cd-9661e3a57c1c",
   },
   {
